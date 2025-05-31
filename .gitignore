@@ -1,0 +1,18 @@
+# Node modules
+node_modules/
+dist/
+
+# Logs
+*.log
+
+# Env files
+.env
+.env.*
+
+# Build artifacts
+*.tsbuildinfo
+
+# Editor/OS files
+.DS_Store
+.vscode/
+.idea/

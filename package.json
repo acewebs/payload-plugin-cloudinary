@@ -1,0 +1,40 @@
+{
+  "name": "@acewebs/payload-plugin-cloudinary",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "tsup src/index.ts --watch"
+  },
+  "peerDependencies": {
+    "payload": "^3.39.1",
+    "cloudinary": "^2.6.1"
+  },
+  "dependencies": {
+    "cloudinary": "^2.6.1"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "cloudinary": "^2.6.1"
+  },
+  "author": "Aceweb <andrei@aceweb.solutions>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acewebs/payload-plugin-cloudinary"
+  },
+  "bugs": {
+    "url": "https://github.com/acewebs/payload-plugin-cloudinary/issues"
+  },
+  "homepage": "https://github.com/acewebs/payload-plugin-cloudinary#readme"
+}
