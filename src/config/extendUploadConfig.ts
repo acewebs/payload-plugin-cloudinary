@@ -9,9 +9,8 @@ export const extendUploadConfig = (
 ): Partial<CollectionConfig> => {
   const upload = typeof collection.upload === "object" ? collection.upload : {};
 
-  collection.fields = [...(collection.fields || []), ...cloudinaryFields];
-
   return {
+    fields: [...(collection.fields || []), ...cloudinaryFields],
     upload: {
       ...upload,
       disableLocalStorage: true,
@@ -23,8 +22,8 @@ export const extendUploadConfig = (
       afterRead: [
         ...(collection.hooks?.afterRead || []),
         ({ doc }) => {
-          if (typeof doc?.cloudinaryURL === "string") {
-            doc.url = doc.cloudinaryURL;
+          if (typeof doc?.cloudinaryUrl === "string") {
+            doc.url = doc.cloudinaryUrl;
           }
           return doc;
         },

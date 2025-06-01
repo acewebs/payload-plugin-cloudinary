@@ -11,7 +11,8 @@ export const cloudinaryStoragePlugin = (
   return (config) => {
     for (const collection of config.collections || []) {
       if (opts.collections.includes(collection.slug) && collection.upload) {
-        Object.assign(collection, extendUploadConfig(collection));
+        const modified = extendUploadConfig(collection);
+        Object.assign(collection, modified);
       }
     }
 

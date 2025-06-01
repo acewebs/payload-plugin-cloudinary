@@ -7,7 +7,7 @@ export type CloudinaryPluginOptions = {
 };
 
 export type CloudinaryMediaDoc = Document & {
-  cloudinaryURL?: string;
+  cloudinaryUrl?: string;
   cloudinaryPublicId?: string;
   mimeType?: string;
   filename?: string;
