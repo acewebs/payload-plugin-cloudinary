@@ -1,5 +1,4 @@
 import { GetAdminThumbnail } from "payload";
-import { PLACEHOLDER_IMAGE } from "../constants";
 import { logCloudinary } from "./logger";
 
 export const adminThumbnail: GetAdminThumbnail = ({ doc }) => {
@@ -13,7 +12,7 @@ export const adminThumbnail: GetAdminThumbnail = ({ doc }) => {
         cloudinaryUrl,
         initialUrl,
       });
-      return PLACEHOLDER_IMAGE;
+      return "thumbnail";
     }
 
     const ext = url.split(".").pop();
@@ -27,6 +26,6 @@ export const adminThumbnail: GetAdminThumbnail = ({ doc }) => {
     return thumb;
   } catch (err) {
     console.warn("[CloudinaryPlugin] adminThumbnail failed", err);
-    return PLACEHOLDER_IMAGE;
+    return "thumbnail";
   }
 };
